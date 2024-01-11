@@ -7,13 +7,11 @@ import numpy as np
 CWD = os.path.dirname(os.path.realpath(__file__)) # get path to file relative to exec dir
 
 def unique_filename(filename: str) -> str:
-    path = os.path.join(CWD, filename)
-
     fileext = '.' + filename.split('.')[-1]
 
     retval = filename
     idx = 1
-    while os.path.exists(retval):
+    while os.path.exists(os.path.join(CWD, retval)):
         tag = '(' + str(idx) + ')'
         idx += 1
         retval = filename.replace(fileext, tag + fileext)
