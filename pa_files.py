@@ -33,7 +33,7 @@ def read_json(filename: str):
 
 # to dump json data to a file
 # to create a new file if the file doesn't exist, make_new=True
-def dump_json(filename: str, data: dict, make_new=False):
+def save_json(filename: str, data: dict, make_new=False):
     filename = unique_filename(filename)
 
     path = os.path.join(CWD, filename)
