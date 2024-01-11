@@ -4,7 +4,7 @@ import base64
 import cv2
 import numpy as np
 
-CWD = os.path.dirname(os.path.realpath(__file__))
+CWD = os.path.dirname(os.path.realpath(__file__)) # get path to file relative to exec dir
 
 def unique_filename(filename: str) -> str:
     path = os.path.join(CWD, filename)
